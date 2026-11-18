@@ -1,0 +1,68 @@
+[
+    {
+        "run_id": "RUN-RECOVERY-001",
+        "task_id": "TASK-0001",
+        "event": "task.claimed",
+        "attempt": 1,
+        "task_status": "running",
+        "outcome": "claimed",
+        "next_action": "process",
+        "details": {}
+    },
+    {
+        "run_id": "RUN-RECOVERY-001",
+        "task_id": "TASK-0001",
+        "event": "task.retry_scheduled",
+        "attempt": 1,
+        "task_status": "queued",
+        "outcome": "retryable_error",
+        "next_action": "retry",
+        "details": {
+            "reason": "TransientTaskError"
+        }
+    },
+    {
+        "run_id": "RUN-RECOVERY-001",
+        "task_id": "TASK-0001",
+        "event": "task.claimed",
+        "attempt": 2,
+        "task_status": "running",
+        "outcome": "claimed",
+        "next_action": "process",
+        "details": {}
+    },
+    {
+        "run_id": "RUN-RECOVERY-001",
+        "task_id": "TASK-0001",
+        "event": "task.retry_scheduled",
+        "attempt": 2,
+        "task_status": "queued",
+        "outcome": "retryable_error",
+        "next_action": "retry",
+        "details": {
+            "reason": "TaskTimeoutError"
+        }
+    },
+    {
+        "run_id": "RUN-RECOVERY-001",
+        "task_id": "TASK-0001",
+        "event": "task.claimed",
+        "attempt": 3,
+        "task_status": "running",
+        "outcome": "claimed",
+        "next_action": "process",
+        "details": {}
+    },
+    {
+        "run_id": "RUN-RECOVERY-001",
+        "task_id": "TASK-0001",
+        "event": "task.acknowledged",
+        "attempt": 3,
+        "task_status": "acknowledged",
+        "outcome": "success",
+        "next_action": "complete",
+        "details": {
+            "total_amount": 1000.0
+        }
+    }
+]

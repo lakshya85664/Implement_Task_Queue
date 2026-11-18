@@ -1,0 +1,40 @@
+{
+    "report_name": "Task Queue Evidence Report",
+    "generated_at": "2026-11-18T11:37:35.775785+00:00",
+    "expected_evidence_count": 5,
+    "found_evidence_count": 5,
+    "valid_json_count": 5,
+    "evidence_complete": true,
+    "evidence": [
+        {
+            "path": "outputs/task2_task_queue.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "outputs/task3_queue_recovery.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "outputs/task4_queue_measurements.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "traces/task3_queue_recovery_trace.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        },
+        {
+            "path": "traces/task4_queue_observability.json",
+            "exists": true,
+            "valid": true,
+            "message": "valid JSON"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "timestamp": "2026-11-18T11:36:14.088523+00:00",
+        "run_id": "RUN-OBS-001",
+        "task_id": "TASK-0001",
+        "event": "adapter.process_succeeded",
+        "task_status": "running",
+        "attempt": 1,
+        "outcome": "success",
+        "next_action": "continue_acknowledgement",
+        "details": {
+            "latency_ms": 0.0086,
+            "response": {
+                "order_id": "ORD-OBS-001",
+                "processing_status": "processed",
+                "total_amount": 1200.0,
+                "currency": "INR",
+                "api_key": "[REDACTED]"
+            }
+        }
+    }
+]

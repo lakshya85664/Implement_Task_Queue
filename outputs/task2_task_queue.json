@@ -1,0 +1,185 @@
+{
+    "run_id": "RUN-QUEUE-2001",
+    "business_key": "ORD-2001",
+    "workflow_state": "completed",
+    "task": {
+        "task_id": "TASK-0001",
+        "run_id": "RUN-QUEUE-2001",
+        "payload": {
+            "order": {
+                "order_id": "ORD-2001",
+                "customer_id": "CUST-2001",
+                "product_id": "PROD-501",
+                "quantity": 2,
+                "unit_price": 750.0,
+                "currency": "INR"
+            },
+            "operation": "process_order",
+            "priority": 3
+        },
+        "status": "acknowledged",
+        "attempts": 1,
+        "max_attempts": 3,
+        "owner": "task_queue_worker",
+        "created_at": "2026-11-18T11:33:07.173466Z",
+        "acknowledged_at": "2026-11-18T11:33:07.173729Z",
+        "result": {
+            "order_id": "ORD-2001",
+            "processing_status": "processed",
+            "quantity": 2,
+            "unit_price": 750.0,
+            "total_amount": 1500.0,
+            "currency": "INR"
+        }
+    },
+    "result": {
+        "task_id": "TASK-0001",
+        "order_id": "ORD-2001",
+        "status": "acknowledged",
+        "message": "Order processed and acknowledged successfully.",
+        "processed": true
+    },
+    "queue_snapshot": {
+        "pending": 0,
+        "claimed": 0,
+        "acknowledged": 1,
+        "total": 1
+    },
+    "task_visibility": {
+        "task_id": "TASK-0001",
+        "run_id": "RUN-QUEUE-2001",
+        "order_id": "ORD-2001",
+        "status": "acknowledged",
+        "attempts": 1,
+        "acknowledged_at": "2026-11-18T11:33:07.173729+00:00"
+    },
+    "events": [
+        {
+            "event_id": "EVT-0001",
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "NO-TASK",
+            "event_type": "workflow.transition",
+            "state": "running",
+            "timestamp": "2026-11-18T11:33:07.173392Z",
+            "details": {
+                "event": "start",
+                "previous_state": "created",
+                "next_state": "running"
+            }
+        },
+        {
+            "event_id": "EVT-0002",
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "producer.task_published",
+            "state": "running",
+            "timestamp": "2026-11-18T11:33:07.173482Z",
+            "details": {
+                "order_id": "ORD-2001"
+            }
+        },
+        {
+            "event_id": "EVT-0003",
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "worker.task_claimed",
+            "state": "running",
+            "timestamp": "2026-11-18T11:33:07.173695Z",
+            "details": {
+                "attempt": 1
+            }
+        },
+        {
+            "event_id": "EVT-0004",
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "worker.task_acknowledged",
+            "state": "running",
+            "timestamp": "2026-11-18T11:33:07.173759Z",
+            "details": {
+                "total_amount": 1500.0,
+                "task_status": "acknowledged"
+            }
+        },
+        {
+            "event_id": "EVT-0005",
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "workflow.transition",
+            "state": "completed",
+            "timestamp": "2026-11-18T11:33:07.173815Z",
+            "details": {
+                "event": "complete",
+                "previous_state": "running",
+                "next_state": "completed"
+            }
+        }
+    ],
+    "traces": [
+        {
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "NO-TASK",
+            "event_type": "workflow.transition",
+            "workflow_state": "running",
+            "task_status": "queued",
+            "attempt": 0,
+            "timestamp": "2026-11-18T11:33:07.173417Z",
+            "details": {
+                "event": "start",
+                "previous_state": "created",
+                "next_state": "running"
+            }
+        },
+        {
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "producer.task_published",
+            "workflow_state": "running",
+            "task_status": "queued",
+            "attempt": 0,
+            "timestamp": "2026-11-18T11:33:07.173488Z",
+            "details": {
+                "order_id": "ORD-2001"
+            }
+        },
+        {
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "worker.task_claimed",
+            "workflow_state": "running",
+            "task_status": "running",
+            "attempt": 1,
+            "timestamp": "2026-11-18T11:33:07.173702Z",
+            "details": {
+                "attempt": 1
+            }
+        },
+        {
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "worker.task_acknowledged",
+            "workflow_state": "running",
+            "task_status": "acknowledged",
+            "attempt": 1,
+            "timestamp": "2026-11-18T11:33:07.173770Z",
+            "details": {
+                "total_amount": 1500.0,
+                "task_status": "acknowledged"
+            }
+        },
+        {
+            "run_id": "RUN-QUEUE-2001",
+            "task_id": "TASK-0001",
+            "event_type": "workflow.transition",
+            "workflow_state": "completed",
+            "task_status": "acknowledged",
+            "attempt": 1,
+            "timestamp": "2026-11-18T11:33:07.173823Z",
+            "details": {
+                "event": "complete",
+                "previous_state": "running",
+                "next_state": "completed"
+            }
+        }
+    ]
+}
